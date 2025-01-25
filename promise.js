@@ -1,3 +1,7 @@
+//CREATING PROMISES AND CHAINING
+//Note : just call the script in html tag
+
+
 const cart = ["kurta", "pajama", "pant"];
 
 createOrder(cart)
@@ -28,6 +32,7 @@ function createOrder(data){
         
         if(orderId && isvalidCart(data)){
             console.log("processing your order");
+            //settimeout sending the data after 5 secs
             setTimeout(function(){
                 resolve(orderId);
             },5000)
@@ -40,7 +45,7 @@ function createOrder(data){
 
 
 function isvalidCart(data){
-    return false;
+    return true;
 }
 
 function proceedtoPayment(orderId){
